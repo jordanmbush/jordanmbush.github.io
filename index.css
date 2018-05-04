@@ -7,7 +7,7 @@ body {
 }
 header {
   position: relative;
-  padding: 20px;
+  padding: 30px;
   background-image: url(https://res.cloudinary.com/hud9ala09/image/upload/c_limit,f_auto,g_center,h_630,w_1500/v1515626431/hhskilpx2ja7ljxxmsml.jpg);
   background-position: center;
   background-size: cover;
@@ -20,9 +20,9 @@ header {
   text-align: center;
   height: 50px;
   width: 50px;
-  padding: 5px;
-  border: 5px solid rgb(37, 207, 31);
+  padding: 10px;
   background-color: white;
+  box-shadow: 0 0 10px 5px rgba(37, 207, 31, 0.767);
   color: rgb(37, 207, 31);
   font-weight: bold;
   text-decoration: none;
@@ -30,9 +30,12 @@ header {
   position: absolute;
   top: 600px;
 }
+.linktotop:hover {
+  animation: jump 1s;
+}
 .sticky {
   position: fixed;
-  top: 90px;
+  top: 20px;
 }
 .sticky + .content {
   padding-top: 60px;
@@ -77,13 +80,16 @@ header {
   display: flex;
   flex-direction: column;
   color: white;
-  border-bottom-left-radius: 15px;
+  box-shadow: 5px 5px 20px 3px rgba(238, 238, 238, 0.733);
 }
 nav {
   display: flex;
-  width: 70%;
+  width: 100%;
   margin: 0 auto 0 auto;
   justify-content: space-between;
+  background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.4), transparent);
+  padding: 10px 15% 10px 15%;
+  box-sizing: border-box;
 }
 nav > a {
   -webkit-transition: all 3s ease;
@@ -96,10 +102,9 @@ nav > a >  div {
   align-items: center;
   padding: 10px;
   background-color: white;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   color: rgb(37, 207, 31);
-  margin-top: 15px;
   border-radius: 50%;
   border-top-color: rgba(37, 207, 31, 0.767);
   font-weight: bold;
@@ -207,6 +212,7 @@ main {
   width: 80%;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 .skill {
   background-color: white;
@@ -214,7 +220,40 @@ main {
   border-radius: 50%;
   margin: 25px;
   padding: 5px;
-  box-shadow: 0 0 40px white;
+  box-shadow: 0 0 20px 3px rgba(37, 207, 31, 0.767);
+  position: relative;
+}
+.skill-description {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: transparent;
+  color: transparent;
+  font-weight: bold;
+  font-size: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill-description:hover {
+  background-color: rgba(37, 207, 31, 0.952);
+  color: black;
+}
+#massive {
+  width: 60px;
+  height: 63px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill:hover {
+  box-shadow: 0 0 30px 10px rgba(37, 207, 31, 0.767);
 }
 svg {
   background-color: white;
@@ -234,5 +273,31 @@ svg {
   }
   to {
     transform: scale(1);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  90% {
+    transform: translateY(0px);
+  }
+  97% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
