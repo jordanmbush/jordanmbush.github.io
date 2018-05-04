@@ -1,3 +1,6 @@
+p {
+  margin: 15px;
+}
 body {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
@@ -11,6 +14,17 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 1;
+}
+.transparency-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: silver;
+  z-index: 2;
+  opacity: .5;
 }
 .linktotop {
   display: flex;
@@ -62,6 +76,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 4;
 }
 .profile-img {
   background-image: url(/assets/profile_photo.jpg);
@@ -74,12 +89,13 @@ header {
 }
 .colored-container {
   width: 70%;
-  background-color: rgba(37, 207, 31, 0.767);
+  background-color: rgba(37, 207, 31, 0.5);
   height: 100%;
   display: flex;
   flex-direction: column;
   color: white;
   box-shadow: 5px 5px 20px 3px rgba(238, 238, 238, 0.733);
+  z-index: 3;
 }
 nav {
   display: flex;
@@ -287,7 +303,8 @@ svg {
   background-color: transparent;
   color: transparent;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
+  line-height: 30px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -301,7 +318,7 @@ svg {
   font-family: 'Playfair Display';
 }
 .project-description:hover {
-  background-color: silver;
+  background-color: rgba(192, 192, 192, 0.9);
   color: black;
 }
 .project-description span {
@@ -310,9 +327,19 @@ svg {
 }
 footer {
   width: 100%;
-  height: 100px;
+  height: 50px;
   background-color: rgba(37, 207, 31, 0.767);
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+footer > div {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
 }
 
 
