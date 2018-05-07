@@ -1,11 +1,16 @@
+:root {
+  --primary-color: rgb(207, 145, 31);
+  --primary-transparent-color: rgba(207, 145, 31, 0.75);
+}
+
 p {
   margin: 15px;
 }
 body {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
-  background-color: #262627;
-  color: white;
+  background-color: white;
+  color: black;
 }
 header {
   position: relative;
@@ -35,8 +40,8 @@ header {
   width: 50px;
   padding: 10px;
   background-color: white;
-  box-shadow: 0 0 10px 5px rgba(37, 207, 31, 0.767);
-  color: rgb(37, 207, 31);
+  box-shadow: 0 0 10px 5px var(--primary-transparent-color);
+  color: var(--primary-color);
   font-weight: bold;
   text-decoration: none;
   border-radius: 50%;
@@ -89,7 +94,7 @@ header {
 }
 .colored-container {
   width: 70%;
-  background-color: rgba(37, 207, 31, 0.5);
+  background-color: rgba(207, 145, 31, 0.5);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -118,20 +123,18 @@ nav > a >  div {
   align-items: center;
   padding: 10px;
   background-color: white;
-  width: 40px;
-  height: 40px;
-  color: rgb(37, 207, 31);
+  width: 55px;
+  height: 55px;
+  color: var(--primary-color);
   border-radius: 50%;
-  border-top-color: rgba(37, 207, 31, 0.767);
+  border-top-color: var(--primary-transparent-color);
   font-weight: bold;
   animation: shrink .7s;
 }
 nav > a > div:hover {
-  background-color: rgb(37, 207, 31);
+  background-color: var(--primary-color);
   color: white;
   border: 5px solid white;
-  width: 40px;
-  height: 40px;
   cursor: pointer;
   transform: scale(1.3) translateY(-10px);
   font-weight: normal;
@@ -164,7 +167,7 @@ nav > a > div:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(37, 207, 31);
+  color: var(--primary-color);
 }
 .contact-info-container {
   display: flex;
@@ -172,7 +175,7 @@ nav > a > div:hover {
   align-items: center;
   flex-direction: column;
   font-size: 20px;
-  color: rgba(37, 207, 31, 0.767);
+  color: var(--primary-transparent-color);
   margin-top: 30px;
 }
 .label {
@@ -188,7 +191,7 @@ nav > a > div:hover {
   height: 20px;
 }
 .contact-info:hover {
-  background-color: #262627;
+  background-color: var(--primary-color);
   color: white;
   border: 2px solid white;
 }
@@ -197,7 +200,7 @@ nav > a > div:hover {
 }
 .contact-info-container a {
   text-decoration: none;
-  color: rgba(37, 207, 31, 0.767);
+  color: var(--primary-transparent-color);
   font-weight: normal;
 }
 main {
@@ -235,7 +238,7 @@ main {
   border-radius: 50%;
   margin: 25px;
   padding: 5px;
-  box-shadow: 0 0 20px 3px rgba(37, 207, 31, 0.767);
+  box-shadow: 0 0 20px 3px var(--primary-transparent-color);
   position: relative;
 }
 .skill-description {
@@ -256,8 +259,9 @@ main {
   align-items: center;
 }
 .skill-description:hover {
-  background-color: rgba(37, 207, 31, 0.952);
+  background-color: rgba(207, 145, 31, 0.952);
   color: black;
+  cursor: default;
 }
 #massive {
   width: 60px;
@@ -268,7 +272,7 @@ main {
   align-items: center;
 }
 .skill:hover {
-  box-shadow: 0 0 30px 10px rgba(37, 207, 31, 0.767);
+  box-shadow: 0 0 30px 10px var(--primary-transparent-color);
 }
 svg {
   background-color: white;
@@ -286,7 +290,7 @@ svg {
   overflow: hidden;
   border-radius: 15px;
   border: 3px solid black;
-  background-color: black;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,7 +322,7 @@ svg {
   font-family: 'Playfair Display';
 }
 .project-description:hover {
-  background-color: rgba(192, 192, 192, 0.9);
+  background-color: rgba(207, 145, 31, 0.8);
   color: black;
 }
 .project-description span {
@@ -328,7 +332,7 @@ svg {
 footer {
   width: 100%;
   height: 50px;
-  background-color: rgba(37, 207, 31, 0.767);
+  background-color: var(--primary-transparent-color);
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -355,13 +359,20 @@ footer > div {
   }
 }
 @keyframes shrink {
-  from {
+  0% {
     transform: scale(1.3) translateY(-10px);
-    background-color: rgb(37, 207, 31);
+    background-color: var(--primary-color);
+    border: 5px solid white;
   }
-  to {
+  15% {
+    transform: scale(1.3) translateY(-10px);
+    background-color: var(--primary-color);
+    border: 5px solid white;
+  }
+  100% {
     transform: scale(1);
     background-color: white;
+    border: none;
   }
 }
 @keyframes jump {
