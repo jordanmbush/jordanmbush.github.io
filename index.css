@@ -261,7 +261,7 @@ main {
 .skill-description:hover {
   background-color: rgba(207, 145, 31, 0.952);
   color: black;
-  cursor: default;
+  animation: skill-roll-on-hover .7s;
 }
 #massive {
   width: 60px;
@@ -281,9 +281,13 @@ svg {
 
 .projects-container {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   width: 80%;
   margin: auto;
+}
+.projects-content {
+  display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .project-container {
@@ -399,5 +403,16 @@ footer > div {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes skill-roll-on-hover {
+  0% {
+    background-color: transparent;
+    color: transparent;
+  }
+  100% {
+    background-color: rgba(207, 145, 31, 0.952);
+    color: black;
+    transform: rotate(360deg);
   }
 }
