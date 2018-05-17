@@ -32,7 +32,7 @@
             <div><span class="jordan-bush">Jordan Bush</span></div>
             <div><span>Web Developer</span></div>
             <div class="contact-info-container">
-              <a href="mailto:jordanmbush@gmail.com?subject=Your site was so awesome! I would love to talk to you!"><div class="contact-info"><i class="fas fa-at"></i><span class="email">jordanmbush@gmail.com</span></div></a>
+              <a href="mailto:jordanmbush@gmail.com?subject=Your site was so awesome! I would love to talk to you!"><div class="contact-info"><i class="fas fa-at"></i><span id='email-span' class="email">jordanmbush@gmail.com</span></div></a> <div id="clip-board"><i class="far fa-copy"></i></div>
               <a href="https://www.linkedin.com/in/jordan-m-bush" target="_blank"><div class="contact-info"><i class="fab fa-linkedin"></i><span class="linked-in">/in/jordan-m-bush</span></div></a>
               <a href="https://github.com/jordanmbush" target="_blank"><div class="contact-info"><i class="fab fa-github-square"></i><span class="git-hub">/jordanmbush</span></div></a>
             </div>
@@ -74,23 +74,28 @@
         <div class="projects-content">
           <div class="project-container">
             <div class="title">Monilibrium</div>
-            <img src="/assets/monilibrium_screenshot_1.PNG" alt="Monilibrium">
+            <img src="./assets/monilibrium_screenshot_1.png" alt="Monilibrium">
             <a href="https://www.monilibrium.com" target="_blank"><div class="project-description">Monilibrium is a Personal Budgeting Full Stack Application. It allows users to setup bill templates (like a budget), and auto populates transactions based on bill frequencies.<span>See Live Demo</span></div></a>
           </div>
           <div class="project-container">
             <div class="title">MenuBomb</div>
-            <img src="/assets/menu_bomb_screenshot.PNG" alt="menuBomb">
+            <img src="./assets/menu_bomb_screenshot.png" alt="menuBomb">
             <a href="https://github.com/joshborup/menu-bomb" target="_blank"><div class="project-description">menuBOMB is an online menu hosting and menu creation app. It allows restaurants to easily create their menu, with images and prices, without the hassle of having to create their own site from scratch. menuBomb is a Team built application, and you can check out the code by <span>clicking here</span>.</div></a>
           </div>
           <div class="project-container">
             <div class="title">Calculator</div>
-            <img src="/assets/calculator_screenshot.PNG" alt="calculator">
+            <img src="./assets/calculator_screenshot.png" alt="calculator">
             <div class="project-description">A basic calculator application, with a history view and a few easter eggs if you can find them!</div>
           </div>
           <div class="project-container">
             <div class="title">Code Club</div>
-            <img src="/assets/code_club_screenshot.PNG" alt="Code Club">
+            <img src="./assets/code_club_screenshot.png" alt="Code Club">
             <a href="https://github.com/jordanmbush/nodb-project" target="_blank"><div class="project-description">Like Robots? Programming? Battling programmer robots?! Code Club is a fun character creation, and battling application. Build your robot by specifying it's programming skills with limited skill points to assign, and battle him/her against other robots on the same network. Code Club is a non-database React application displaying the use of React Components, and Sub-Components. <span>Check out the code here</span></div></a>
+          </div>
+          <div class="project-container">
+            <div class="title">BlogPost</div>
+            <img src="./assets/blog_post_screenshot.png" alt="BlogPost">
+            <a href="https://github.com/jordanmbush/blog" target="_blank"><div class="project-description">A simple blog website, utilizing the Typicode API, Higher Order Components, Redux, and more. This project focuses on best practices, and code simplicity. Components are modularized, and made resusable when it makes sense. Redux was used in implementing this project with redux-promise-middleware library so async calls could be made from the action creators. <span>Check out the code here</span></div></a>
           </div>
         </div>
       </section>
@@ -134,11 +139,20 @@
         });
       } // End if
     });
+
+    $("clip-board").live('click', function() {
+      var copyText = document.getElementById("email-span");
+      copyText.select();
+      /* Copy the text inside the text field */
+      document.execCommand("Copy");
+      /* Alert the copied text */
+      alert("Copied the text: " + copyText.value);
+    })
   });
 
   // ============================ STICKY LINK ============================
   // When the user scrolls the page, execute myFunction 
-  window.onscroll = function() {myFunction()};
+  window.onscroll = function() {toggleSticky()};
 
   // Get the linkToTop
   var linkToTop = document.getElementById("linktotop");
@@ -147,12 +161,17 @@
   var sticky = linkToTop.offsetTop -20;
 
   // Add the sticky class to the linkToTop when you reach its scroll position. Remove "sticky" when you leave the scroll position
-  function myFunction() {
+  function toggleSticky() {
     if (window.pageYOffset >= sticky) {
       linkToTop.classList.add("sticky")
     } else {
       linkToTop.classList.remove("sticky");
     }
   }
+
+  function copyToClipBoard() {
+    
+  }
+
 </script>
 </html>
