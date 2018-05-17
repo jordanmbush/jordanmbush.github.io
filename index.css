@@ -84,7 +84,7 @@ header {
   z-index: 4;
 }
 .profile-img {
-  background-image: url(/assets/profile_photo.jpg);
+  background-image: url(./assets/profile_photo.jpg);
   background-size: cover;
   height: 250px;
   width: 250px;
