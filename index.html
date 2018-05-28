@@ -26,13 +26,12 @@
             <a href="#about"><div class="about">About</div></a>
             <a href="#skills"><div class="skills">Skills</div></a>
             <a href="#portfolio"><div class="portfolio">Portfolio</div></a>
-            <a href="#education"><div class="education">Education</div></a>
           </nav>
           <div class="header-content-container">
             <div><span class="jordan-bush">Jordan Bush</span></div>
             <div><span>Web Developer</span></div>
             <div class="contact-info-container">
-              <a href="mailto:jordanmbush@gmail.com?subject=Your site was so awesome! I would love to talk to you!"><div class="contact-info"><i class="fas fa-at"></i><span id='email-span' class="email">jordanmbush@gmail.com</span></div></a> <div id="clip-board"><i class="far fa-copy"></i></div>
+              <a href="mailto:jordanmbush@gmail.com?subject=Your site was so awesome! I would love to talk to you!"><div class="contact-info"><i class="fas fa-at"></i><span id='email-span' class="email">jordanmbush@gmail.com</span></div></a>
               <a href="https://www.linkedin.com/in/jordan-m-bush" target="_blank"><div class="contact-info"><i class="fab fa-linkedin"></i><span class="linked-in">/in/jordan-m-bush</span></div></a>
               <a href="https://github.com/jordanmbush" target="_blank"><div class="contact-info"><i class="fab fa-github-square"></i><span class="git-hub">/jordanmbush</span></div></a>
             </div>
@@ -42,9 +41,9 @@
     </header>
     <main>
       <section class="intro-container">
-        <div id="about" class="title"><span>About Me</span></div>
+        <div id="about" class="title"><span>Hey, I'm Jordan</span></div>
         <div class="intro-content">
-          <p>I am Jordan Bush, and I am a Web Developer who has been programming for about 4 years. I started programming by teaching myself Visual Basic for Applications, and then studied at Phoenix College where I used C# in .NET building WPF applications. JavaScript is currently my strongest language. My most recent work consists of building React full stack applications.</p>
+          <p>I am a Web Developer who has been programming for about 4 years. I started programming by teaching myself Visual Basic for Applications, and then studied at Phoenix College where I used C# in .NET building WPF applications. JavaScript is currently my strongest language. My most recent work consists of building React full stack applications.</p>
           <p>I've had a passion for computer's since a young age. I've wanted to be a software developer since before I KNEW that I wanted to be a software developer and am extremely proud to have accomplished one of my childhood dreams.</p>
           <p>I love learning new technologies, and wish I knew them all. My strengths are algorithms, problem solving, and my ability to get along with others.</p>
           <p>This site was designed by myself, with some criticism from my beautiful wife.</p>
@@ -73,29 +72,29 @@
         <div id="portfolio" class="title"><span>Portfolio</span></div>
         <div class="projects-content">
           <div class="project-container">
-            <div class="title">Monilibrium</div>
+            <div class="project-title">Monilibrium</div>
             <img src="./assets/monilibrium_screenshot_1.png" alt="Monilibrium">
             <a href="https://www.monilibrium.com" target="_blank"><div class="project-description">Monilibrium is a Personal Budgeting Full Stack Application. It allows users to setup bill templates (like a budget), and auto populates transactions based on bill frequencies.<span>See Live Demo</span></div></a>
           </div>
           <div class="project-container">
-            <div class="title">MenuBomb</div>
+            <div class="project-title">MenuBomb</div>
             <img src="./assets/menu_bomb_screenshot.png" alt="menuBomb">
             <a href="https://github.com/joshborup/menu-bomb" target="_blank"><div class="project-description">menuBOMB is an online menu hosting and menu creation app. It allows restaurants to easily create their menu, with images and prices, without the hassle of having to create their own site from scratch. menuBomb is a Team built application, and you can check out the code by <span>clicking here</span>.</div></a>
           </div>
           <div class="project-container">
-            <div class="title">Calculator</div>
+            <div class="project-title">Calculator</div>
             <img src="./assets/calculator_screenshot.png" alt="calculator">
-            <div class="project-description">A basic calculator application, with a history view and a few easter eggs if you can find them!</div>
+            <a href="http://jordanbush-calculator.s3-website-us-west-2.amazonaws.com/" target="_blank"><div class="project-description">A basic calculator application, with a history view and a few easter eggs if you can find them!<span>See a Live Demo</span></div></a>
           </div>
           <div class="project-container">
-            <div class="title">Code Club</div>
+            <div class="project-title">Code Club</div>
             <img src="./assets/code_club_screenshot.png" alt="Code Club">
             <a href="https://github.com/jordanmbush/nodb-project" target="_blank"><div class="project-description">Like Robots? Programming? Battling programmer robots?! Code Club is a fun character creation, and battling application. Build your robot by specifying it's programming skills with limited skill points to assign, and battle him/her against other robots on the same network. Code Club is a non-database React application displaying the use of React Components, and Sub-Components. <span>Check out the code here</span></div></a>
           </div>
           <div class="project-container">
-            <div class="title">BlogPost</div>
+            <div class="project-title">BlogPost</div>
             <img src="./assets/blog_post_screenshot.png" alt="BlogPost">
-            <a href="https://github.com/jordanmbush/blog" target="_blank"><div class="project-description">A simple blog website, utilizing the Typicode API, Higher Order Components, Redux, and more. This project focuses on best practices, and code simplicity. Components are modularized, and made resusable when it makes sense. Redux was used in implementing this project with redux-promise-middleware library so async calls could be made from the action creators. <span>Check out the code here</span></div></a>
+            <a href="http://jordanbush-blog-post.s3-website-us-west-2.amazonaws.com/" target="_blank"><div class="project-description">A simple blog website, utilizing the Typicode API, Higher Order Components, Redux, and more. This project focuses on best practices, and code simplicity. Components are modularized, and made resusable when it makes sense. Redux was used in implementing this project with redux-promise-middleware library so async calls could be made from the action creators. <span>Live Site</span></div></a>
           </div>
         </div>
       </section>
@@ -140,7 +139,7 @@
       } // End if
     });
 
-    $("clip-board").live('click', function() {
+    $("clip-board").on('click', function() {
       var copyText = document.getElementById("email-span");
       copyText.select();
       /* Copy the text inside the text field */
