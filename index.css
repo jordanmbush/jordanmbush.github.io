@@ -6,6 +6,8 @@ section {
   margin-top: 20px;
   margin-bottom: 20px;
   min-height: 80vh;
+  width: 70%;
+  margin: auto;
 }
 p {
   margin: 15px;
@@ -220,7 +222,7 @@ main {
   line-height: 25px;
 }
 .intro-container > * {
-  width: 50%;
+  width: 80%;
 }
 .intro-content> h1 {
   text-align: center;
@@ -233,7 +235,6 @@ main {
 }
 .skills-container > div {
   display: flex;
-  width: 80%;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -288,7 +289,6 @@ svg {
 .projects-container {
   display: flex;
   flex-direction: column;
-  width: 80%;
   margin: auto;
 }
 .projects-content {
